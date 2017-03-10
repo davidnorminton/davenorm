@@ -272,6 +272,7 @@ textarea:focus, input:focus{
     position: relative;
     display: inline-block;
     margin: 160px 0;
+    float : left;
 }
 .level-side {
     height : 100%;
@@ -296,6 +297,35 @@ textarea:focus, input:focus{
     right: 0;
     transform: rotate(-90deg);
     text-align: left;
+}
+.tools {
+    height: 100vh;
+    min-width: 400px;
+    width: calc(100% - 670px);
+    float: left;
+    padding-top: 100px;
+}
+.fa-star {
+    width : 20px;
+}
+.list-tools {
+    list-style: none;
+    text-align: left;
+    min-width: 327px;
+    margin: 0;
+    padding: 10px;
+}
+.list-tools li {
+
+}
+.tool {
+    min-width : 200px;
+}
+.yellow {
+    color : yellow;
+}
+.black {
+    color : black;
 }
 .css {
     width: 100px;
