@@ -1,4 +1,9 @@
 /**
+ * Author  : David Norminton
+ * Website : davenorm.me
+ * Email   : davidnorminton@gmail.com
+ */
+/**
  * SET ONLOAD CSS
  * Some elements need their dimensions set based on device dimensions
  */
