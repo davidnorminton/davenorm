@@ -273,6 +273,7 @@ textarea:focus, input:focus{
     display: inline-block;
     margin: 160px 0;
     float : left;
+    
 }
 .level-side {
     height : 100%;
