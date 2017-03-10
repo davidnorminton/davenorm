@@ -317,11 +317,14 @@ textarea:focus, input:focus{
     padding: 10px;
 }
 .list-tools li {
-
+    line-height: 38px;
 }
 .tool {
-    min-width : 200px;
-    display : inline-block;
+    min-width: 235px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 20px;
 }
 .yellow {
     color : yellow;
