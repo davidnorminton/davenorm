@@ -15,6 +15,11 @@ function setDimensions() {
     frontpage.css('height', windowHeight);
     // give projects 100% height of screen
     $('#projects').css('height', windowHeight);  
+    // add padding to about to center
+    aboutWrapperHeight = $('.box-wrapper').outerHeight();
+    // calc padding
+    padd = (windowHeight - aboutWrapperHeight) / 2; 
+    $('.box-wrapper').css('padding-top', padd);   
 }   
 /**
  * onload set dimensions
