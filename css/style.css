@@ -307,7 +307,7 @@ textarea:focus, input:focus{
     padding-top: 100px;
 }
 .tools h2 {
-    text-align : right;
+    text-align : left;
 }
 .fa-star {
     width : 20px;
@@ -315,10 +315,9 @@ textarea:focus, input:focus{
 .list-tools {
     list-style: none;
     text-align: right;
-    min-width: 327px;
-    margin-right: 20px;;
-    padding: 10px;
-    
+    min-width: 377px;
+    margin-right: 20px;
+    padding: 10px 50px 0 0;
 }
 .list-tools li {
     line-height: 38px;
