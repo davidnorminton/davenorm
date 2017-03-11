@@ -219,7 +219,6 @@ $(document).scroll(function(){
         $('.work-to-head').css('display' , 'none');
     }
 });
-
 /**
  * Fade the about-me section background to white on scroll
  */
