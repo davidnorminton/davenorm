@@ -219,38 +219,7 @@ $(document).scroll(function(){
         $('.work-to-head').css('display' , 'none');
     }
 });
-/**
- * about me section animations
- *
- */
-$(document).ready(function(){
-    function hidePages(){
-        $('.page').each( function(){
-            $(this).addClass('display-none').removeClass('active-page');
-        });
-        $('.page-link').removeClass('active');
-    }
-    $('#index-intro').click(function(){
-        hidePages();
-        $('#page-1').removeClass('display-none').addClass('active-page');
-        $(this).removeClass('in-active').addClass('active'); 
-    });
-    $('#index-wordpress').click(function(){
-        hidePages();
-        $('#page-2').removeClass('display-none').addClass('active-page');
-        $(this).removeClass('in-active').addClass('active'); 
-    });
-    $('#index-coding').click(function(){
-        hidePages();
-        $('#page-3').removeClass('display-none').addClass('active-page');
-        $(this).removeClass('in-active').addClass('active'); 
-    });
-    $('#index-tools').click(function(){
-        hidePages();
-        $('#page-4').removeClass('display-none').addClass('active-page');
-        $(this).removeClass('in-active').addClass('active'); 
-    });
-});
+
 /**
  * Fade the about-me section background to white on scroll
  */
