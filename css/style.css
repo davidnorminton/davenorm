@@ -306,15 +306,19 @@ textarea:focus, input:focus{
     float: left;
     padding-top: 100px;
 }
+.tools h2 {
+    text-align : right;
+}
 .fa-star {
     width : 20px;
 }
 .list-tools {
     list-style: none;
-    text-align: left;
+    text-align: right;
     min-width: 327px;
-    margin: 0;
+    margin-right: 20px;;
     padding: 10px;
+    
 }
 .list-tools li {
     line-height: 38px;
@@ -412,7 +416,9 @@ textarea:focus, input:focus{
 }
 #skills {
     position: relative;
-    height: 100%;
+    min-height: 100%;
+    overflow: auto;
+    text-align: center;
 }
 #about-head {
     display : none;
