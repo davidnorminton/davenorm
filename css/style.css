@@ -12,6 +12,12 @@ body{
     font-family: 'Montserrat', sans-serif;
     color : #555555;
 }
+.left {
+    float : left;
+}
+.right {
+    float : right;
+}
 a {
     text-decoration: none;
 }
