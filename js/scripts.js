@@ -406,25 +406,7 @@ $('#next-project').click(function(){
     proData.changeDOM(item_data);
 });
 /** end projects navigation **/
-$(document).ready(function(){  
-     /**
-      * stop body from scrolling when scrolling withn project-image
-      */
-      $('.project-image').mouseenter(function(){
-          $('html').css('overflow', 'hidden');
-      }).mouseleave(function(){
-          $('html').css('overflow-y', 'scroll');
-      });
-     /**
-      * animation for view site link on about-project
-      */      
-      $('.project-link').mouseenter(function(){
-          $(this).find('.link-back').css({'background':'#2a2ebd','width':'100%'});
-      }).mouseleave(function(){
-          $(this).find('.link-back').css({'background':'#fff','width':'0'});
-      });
 
-});
 /**
  * Smooth scrolling
  */
