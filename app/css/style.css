@@ -1,3 +1,6 @@
+#test {
+  color: #333; }
+
 html {
   width: 100%;
   height: 100%;
@@ -159,14 +162,14 @@ textarea:focus, input:focus {
   display: none; }
 
 .title-lrg {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 74px;
   color: #fff;
   font-weight: 300;
   letter-spacing: 2px; }
 
 .title-sml {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 22px;
   color: #fff;
   letter-spacing: 6px; }
@@ -184,6 +187,7 @@ textarea:focus, input:focus {
     background-size: 100% 100%; }
   100% {
     background-size: 120% 120%; } }
+
 #about-me {
   background: rgba(29, 30, 31, 0.82);
   height: 100%;
@@ -372,7 +376,7 @@ textarea:focus, input:focus {
   z-index: 12345;
   right: 64px;
   background: white;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   padding: 18px 5px;
   font-size: 1.2em;
   color: #1b1a1a;
@@ -449,7 +453,7 @@ textarea:focus, input:focus {
   top: 17px;
   cursor: pointer;
   text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   letter-spacing: 2px;
   width: 194px;
   text-align: center; }
@@ -623,6 +627,7 @@ textarea:focus, input:focus {
     left: 10px; }
   100% {
     right: 10px; } }
+
 /** end projects section **/
 /** open source section **/
 #opensource {
@@ -702,5 +707,3 @@ textarea.contact-input {
   font-size: 30px; }
 
 /** end contact area **/
-
-/*# sourceMappingURL=style.css.map */
