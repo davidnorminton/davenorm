@@ -452,3 +452,30 @@ $(function() {
     }
   });
 });
+/**
+ * lazy load images
+ */
+$(document).scroll(function(){
+    function inView( image ) {
+        var view_top = $(window).scrollTop()+200,
+            view_bottom = view_top + $(window).height(),
+            image_pos = $(image).offset().top;
+        return image_pos > 0 && image_pos < view_top ;     
+    }
+    $('img').each(function(){
+        if ( this.hasAttribute('data-src') && inView(this) ) {
+            console.log(this);
+            if ($(this).hasClass('web-page')) {
+               $('.web-page').each( function(){
+                   var src = this.getAttribute('data-src');
+                   this.removeAttribute('data-src');
+                   this.src = src;
+                });
+            } else {
+                    var src = this.getAttribute('data-src');
+                   this.removeAttribute('data-src');
+                   this.src = src;           
+            }    
+        }    
+    });    
+}); 
