@@ -305,7 +305,6 @@ textarea:focus, input:focus {
 
 .css {
   width: 100px;
-  height: 92%;
   background-image: linear-gradient(#a71919, #f30909);
   left: 157px;
   position: absolute;
@@ -313,11 +312,10 @@ textarea:focus, input:focus {
 
 .animate-css {
   transition: all linear 3s;
-  height: 92% !important; }
+  height: 390px !important; }
 
 .html {
   width: 100px;
-  height: 98%;
   background-image: linear-gradient(#cc8a12, #fdea0a);
   left: 259px;
   position: absolute;
@@ -325,11 +323,10 @@ textarea:focus, input:focus {
 
 .animate-html {
   transition: all linear 3.3s;
-  height: 98% !important; }
+  height: 395px !important; }
 
 .javascript {
   width: 100px;
-  height: 77%;
   background-image: linear-gradient(#118a2b, #13c729);
   left: 361px;
   position: absolute;
@@ -337,11 +334,10 @@ textarea:focus, input:focus {
 
 .animate-javascript {
   transition: all linear 3.2s;
-  height: 77% !important; }
+  height: 350px !important; }
 
 .php {
   width: 100px;
-  height: 65%;
   background-image: linear-gradient(#126e8a, #0fa3d8);
   left: 463px;
   position: absolute;
@@ -349,11 +345,10 @@ textarea:focus, input:focus {
 
 .animate-php {
   transition: all linear 4s;
-  height: 65% !important; }
+  height: 260px !important; }
 
 .linux {
   width: 100px;
-  height: 65%;
   background-image: linear-gradient(#821079, #ec13bf);
   left: 565px;
   position: absolute;
@@ -361,7 +356,7 @@ textarea:focus, input:focus {
 
 .animate-linux {
   transition: all linear 4.2s;
-  height: 65% !important; }
+  height: 270px !important; }
 
 /** end bar chart **/
 /** projects section **/

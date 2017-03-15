@@ -17,11 +17,14 @@ function setDimensions() {
     frontpage.css('height', windowHeight);
     // give projects 100% height of screen
     $('#projects').css('height', windowHeight);  
-    // add padding to about to center
-    aboutWrapperHeight = $('.box-wrapper').outerHeight();
-    // calc padding
-    padd = (windowHeight - aboutWrapperHeight) / 2; 
-    $('.box-wrapper').css('padding-top', padd);   
+
+    $('.box-wrapper').each(function(){
+        // add padding to about to center
+        aboutWrapperHeight = $('.box-wrapper').outerHeight();
+        // calc padding
+        padd = (windowHeight - aboutWrapperHeight) / 2;
+        $(this).css('padding-top', padd);
+    });
     // skills section chart and tools add padding to top
     // first tools
     var tools = $('.tools');
@@ -269,47 +272,72 @@ $(document).scroll(function(){
  */
 $(document).scroll(function(){
 
-    var height_of_about = $('#about-me').outerHeight();
-
-    var top_of_about = $('#about-me').offset().top + height_of_about;
-
-    var win_scroll = $(window).height() + $(window).scrollTop();
-
-
-    if( win_scroll < (top_of_about + (height_of_about / 10 ) ) ) {
-        $('#about-me').css('background','#1b1a1a'); 
+    /**
+     * Check position of #about-me for fade background effect
+     * @param multiplier - increment of position calculed
+     * @ return boolean if point reached
+     */
+    function aboutPos( multiplier ) { 
+        multiplier = multiplier;
+        // div height of #about-me 
+        height_of_about = $('#about-me').outerHeight();
+        // offset + height  
+        top_of_about = $('#about-me').offset().top + height_of_about;
+        // window scroll position
+        win_scroll = $(window).height() + $(window).scrollTop();
+        // calculate position
+        if ( multiplier === 0 ) {
+             return win_scroll < top_of_about + (height_of_about / 10 );
+        } else {
+             return win_scroll > top_of_about + (height_of_about / 10) * multiplier;
+        }
     }
-    if( win_scroll > (top_of_about + (height_of_about / 10)) ) {
-        $('#about-me').css('background','rgb(51, 50, 50)'); 
+    // function set css style background-color with correct color
+    function setBackground( pos ) {
+        // array of background-color 's
+        var colors = ['#1b1a1a', 'rgb(51, 50, 50)', 'rgb(72, 70, 70)', 'rgb(90, 89, 89)',
+                      'rgb(115, 114, 114)', 'rgb(134, 132, 132)', 'rgb(148, 146, 146)',
+                      'rgb(169, 166, 166)', 'rgb(193, 191, 191)', 'rgb(218, 217, 217)', '#fff'];
+        // pos will be array position
+        var pos = pos;
+        // set background
+        return $('#about-me').css('background',colors[pos])
+    } 
+
+    if( aboutPos(0) ) {
+        setBackground(0); 
     }
-    if( win_scroll > (top_of_about + (height_of_about / 10) * 2) ) {
-        $('#about-me').css('background','rgb(72, 70, 70)'); 
+    if( aboutPos(1) ) {
+        setBackground(1); 
+    }
+    if( aboutPos(2) ) {
+        setBackground(2);
     }  
   
-    if( win_scroll > (top_of_about + ((height_of_about / 10) * 3)) ) {
-        $('#about-me').css('background','rgb(90, 89, 89)'); 
+    if( aboutPos(3) ) {
+        setBackground(3);
     }
-    if( win_scroll > (top_of_about + ((height_of_about / 10) * 4)) ) {
-        $('#about-me').css('background','rgb(115, 114, 114)'); 
+    if( aboutPos(4) ) {
+        setBackground(4); 
     }    
 
-    if( win_scroll > (top_of_about + ((height_of_about / 10) * 5))  ) {
-        $('#about-me').css('background','rgb(134, 132, 132)'); 
+    if( aboutPos(5) ) {
+        setBackground(5); 
     }
-    if( win_scroll > (top_of_about + ((height_of_about / 10) * 6)) ) {
-        $('#about-me').css('background','rgb(148, 146, 146)'); 
+    if( aboutPos(6) ) {
+        setBackground(6); 
     }
-    if( win_scroll > (top_of_about + (height_of_about / 10) * 7)  ) {
-        $('#about-me').css('background','rgb(169, 166, 166)'); 
+    if( aboutPos(7) ) {
+        setBackground(7); 
     }
-    if( win_scroll > (top_of_about + (height_of_about / 10) * 8)  ) {
-        $('#about-me').css('background','rgb(193, 191, 191)'); 
+    if( aboutPos(8) ) {
+        setBackground(8); 
     }
-    if( win_scroll > (top_of_about + (height_of_about / 10) * 9)  ) {
-        $('#about-me').css('background','rgb(218, 217, 217)'); 
+    if( aboutPos(9) ) {
+        setBackground(9); 
     }
-    if( win_scroll > (top_of_about + (height_of_about / 10) * 10)  ) {
-        $('#about-me').css('background','#fff'); 
+    if( aboutPos(10) ) {
+        setBackground(10); 
     }
 });
 
