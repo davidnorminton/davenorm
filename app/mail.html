@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+    <head>
+        <title>davenorm.me | developer profile</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+<style>
+body {
+   margin : 0;
+   padding : 0;
+}
+#header{
+    height : 80px;
+    width : 80%;
+    background : #364859;
+}
+#logo {
+    color : white;
+    font-size : 30px;
+    position : absolute ;
+    left : 20px;
+}
+#thanks-text {
+    font-size :22px;
+}
+#thankyou-div {
+    padding-bottom: 50px;
+}
+#thanks-main {
+    text-align : center;
+}
+#back-button {
+    margin-top: 38px;
+    border: 2px solid green;
+    background: rgba(0, 128, 0, 0.61);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: #000;
+    cursor : pointer;
+    transition : all .3s ease-in-out;
+}
+#back-button:hover {
+    margin-top: 38px;
+    border: 2px solid #555555;
+    background: rgb(201, 201, 201);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: #63b163;
+}
+footer{
+    border-top: 1px solid #000;
+    width: 80%;
+    background: #222e39;
+    text-align : center;
+}
+#footer-center{
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+footer a{
+    color: #000;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#very-bottom {
+    background : #364859;
+    color: #fff;
+    padding : 50px;
+}
+#copyright {
+    color: rgba(255,255,255,0.4);
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+.footer-icons {
+    margin: 0 8px 0 0px;
+    color: #6383a0;
+    font-size: 28px !important;
+    transition: 1s;
+    cursor: pointer;
+    border-radius: 50px;
+    background: #222e39;
+    padding: 8px;
+}
+.footer-icons:hover {
+    color: #5F2E2E; 
+}
+</style>
+        <div id="header">
+            <h1 id="logo">DAVENORM.ME</h1>
+        </div>
+        <div id="thanks-main">
+            <div id="thankyou-div">
+                <img id="email-icon" width="100" alt="" src="http://davenorm.me/images/email-icon.png" />
+                    <div id="thanks-text">
+                    <b class="thanks-text">Thank You <?= $name ?> for looking over my profile and taking the time to email me,</b><br /> 
+                    I promise to get back to you as quickly as I can.<br />
+                    Thanks. David.
+                    </div>
+                    <a href="http://davenorm.me"><div id="back-button">Revisit Site</div></a>
+            </div> 
+        </div>
+       <footer>
+           <div id="footer-center">
+           </div>
+           <div id="very-bottom">                
+                <div id="copyright">Copyright &copy; davenorm.me 2017</div>
+                <div id="social">
+                    <a href="mailto:davidnorminton@gmail.com">
+                        <i class="fa fa-envelope footer-icons"></i>
+                    </a>
+                    <a target="_blank" href="https://github.com/davidnorminton">
+                        <i class="fa fa-github footer-icons"></i>
+                    </a>
+                    <a target="_blank" href="https://uk.linkedin.com/in/david-norminton-72911599">
+                        <i class="fa fa-linkedin footer-icons"></i>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/davenorminton">
+                        <i class="fa fa-twitter footer-icons"></i>
+                    </a>
+                </div>
+           </div>
+       </footer>
+   </body>
+</html>
