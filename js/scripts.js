@@ -242,6 +242,15 @@ $(document).scroll(function(){
         $('.projects-title').css({'display':'none'});
         $('.work-to-head').css('display' , 'none');
     }
+    // opensource section
+    var opensource = new waypoints('#opensource', 40);
+    if ( opensource.win_bottom > opensource.eleOffset && opensource.win_bottom < opensource.range ) {
+        $('.opensource-title').fadeIn(300);
+        $('.work-to-head').css('display' , 'inline-block');       
+    } else {
+        $('.opensource-title').css({'display':'none'});
+        $('.work-to-head').css('display' , 'none');
+    }
 });
 /**
  * Fade the about-me section background to white on scroll
