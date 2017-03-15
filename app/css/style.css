@@ -1,6 +1,3 @@
-#test {
-  color: #333; }
-
 html {
   width: 100%;
   height: 100%;
@@ -515,39 +512,7 @@ textarea:focus, input:focus {
 .g-btn {
   color: green; }
 
-#bonneela {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; }
-
-#beesafe {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; }
-
-#fitscreen {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; }
-
-#k-eng {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; }
-
-#allheavymetal {
+#bonneela, #beesafe, #fitscreen, #k-eng, #allheavymetal {
   width: 100%;
   position: absolute;
   top: 0;

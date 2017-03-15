@@ -1,6 +1,3 @@
-#test{
-   color : #333;
-}
 $main_font : 'Montserrat', sans-serif;
 $title_text : 'Oswald', sans-serif;
 html {
@@ -521,30 +518,23 @@ textarea:focus, input:focus{
 .r-btn { color : red }
 .y-btn { color : yellow }
 .g-btn { color : green }
+
 #bonneela {
     width : 100%;
     position : absolute ;
     top : 0; bottom : 0; left : 0; right : 0;
 }
 #beesafe {
-    width : 100%;
-    position : absolute ;
-    top : 0; bottom : 0; left : 0; right : 0;
+    @extend #bonneela;
 }
 #fitscreen {
-    width : 100%;
-    position : absolute ;
-    top : 0; bottom : 0; left : 0; right : 0;
+    @extend #bonneela;
 }
 #k-eng {
-    width : 100%;
-    position : absolute ;
-    top : 0; bottom : 0; left : 0; right : 0;
+    @extend #bonneela;
 }
 #allheavymetal {
-    width : 100%;
-    position : absolute ;
-    top : 0; bottom : 0; left : 0; right : 0;
+    @extend #bonneela;
 }
 .view-project {
     width: calc(100% - 76px);

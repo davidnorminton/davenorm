@@ -456,15 +456,23 @@ $(function() {
  * lazy load images
  */
 $(document).scroll(function(){
+
+    /**
+     * Is image in view
+     * @param image - image to calculate position
+     * @return boolean
+     */
     function inView( image ) {
         var view_top = $(window).scrollTop()+200,
             view_bottom = view_top + $(window).height(),
             image_pos = $(image).offset().top;
         return image_pos > 0 && image_pos < view_top ;     
     }
+    
+    // capture each img tag and check if it has a data-src attribute
     $('img').each(function(){
         if ( this.hasAttribute('data-src') && inView(this) ) {
-            console.log(this);
+            // if a web-page image is in view exchange all data-src for regular src
             if ($(this).hasClass('web-page')) {
                $('.web-page').each( function(){
                    var src = this.getAttribute('data-src');
