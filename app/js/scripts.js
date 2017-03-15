@@ -39,6 +39,10 @@ function setDimensions() {
     var chartHeight = chart.outerHeight();
     var chartPadd = (windowHeight - chartHeight) /2;
     chart.css('padding-top', chartPadd);
+        // make sure #about-head is not visible on homepage
+    if ( $('.head-title').offset().top < $(window).height()-20 ) {
+        $('.head-title').fadeOut('fast');
+    }
 }   
 /**
  * onload set dimensions
@@ -201,12 +205,20 @@ function waypoints(element, precision) {
     this.eleOffset =  $(this.element).offset().top + $(this.element).outerHeight()-this.precision;
     // range element is in viewport
     this.range =  this.eleOffset + this.win_height;
+    // checck if element in range
+    this.inRange = function() {
+        return this.win_bottom > this.eleOffset && this.win_bottom < this.range
+    }
     
 }
 /**
  * when section in viewport add title of section next to burger menu
  */
 $(document).scroll(function(){
+    // make sure #about-head is not visible on homepage
+    if ( $('.head-title').offset().top < $(window).height()-20 ) {
+        $('.head-title').fadeOut('fast');
+    }
     // about section
     var about = new waypoints('#about-me', 10);
     if ( about.win_bottom > about.eleOffset  ) {
@@ -214,28 +226,28 @@ $(document).scroll(function(){
     } else {
         $('#about-head').fadeOut(300);
     }
-    if ( about.win_bottom > about.eleOffset && about.win_bottom < about.range ) {
+    if ( about.inRange() ) {
         $('.about-title').fadeIn(300);
     } else {
         $('.about-title').css({'display':'none'});
     }
     // skills section
     var skills = new waypoints('#skills',70);
-    if ( skills.win_bottom > skills.eleOffset && skills.win_bottom < skills.range ) {
+    if ( skills.inRange() ) {
         $('.skills-title').fadeIn(300);
     } else {
         $('.skills-title').css({'display':'none'});
     }
     // contact section
     var contact = new waypoints('#contact', 40);   
-    if ( contact.win_bottom > contact.eleOffset && contact.win_bottom < contact.range ) {
+    if ( contact.inRange() ) {
         $('.contact-title').fadeIn(300);
     } else {
         $('.contact-title').css({'display':'none'});
     }
     // projects section
     var projects = new waypoints('#projects', 40);
-    if ( projects.win_bottom > projects.eleOffset && projects.win_bottom < projects.range ) {
+    if ( projects.inRange() ) {
         $('.projects-title').fadeIn(300);
         $('.work-to-head').css('display' , 'inline-block');       
     } else {
@@ -244,7 +256,7 @@ $(document).scroll(function(){
     }
     // opensource section
     var opensource = new waypoints('#opensource', 40);
-    if ( opensource.win_bottom > opensource.eleOffset && opensource.win_bottom < opensource.range ) {
+    if ( opensource.inRange() ) {
         $('.opensource-title').fadeIn(300);
         $('.work-to-head').css('display' , 'inline-block');       
     } else {
