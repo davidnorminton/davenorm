@@ -14,9 +14,11 @@ body{
 }
 .left {
     float : left;
+    width : 50%;
 }
 .right {
     float : right;
+    width : 50%;
 }
 a {
     text-decoration: none;
@@ -277,9 +279,7 @@ textarea:focus, input:focus{
     list-style: none;
     position: relative;
     display: inline-block;
-    margin: 160px 0;
-    float : left;
-    
+    float : left;   
 }
 .level-side {
     height : 100%;
@@ -306,11 +306,9 @@ textarea:focus, input:focus{
     text-align: left;
 }
 .tools {
-    height: 100vh;
     min-width: 400px;
     width: calc(100% - 670px);
     float: left;
-    padding-top: 100px;
 }
 .tools h2 {
     text-align : center;

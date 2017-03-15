@@ -11,6 +11,8 @@ function setDimensions() {
     var frontpage = $('#front-page');
     // centre about area on front page
     var windowHeight = $(window).height();
+    // get window width
+    var windowWidth = $(window).width();
     // make front page correct height to fit browser
     frontpage.css('height', windowHeight);
     // give projects 100% height of screen
@@ -20,6 +22,23 @@ function setDimensions() {
     // calc padding
     padd = (windowHeight - aboutWrapperHeight) / 2; 
     $('.box-wrapper').css('padding-top', padd);   
+    // skills section chart and tools add padding to top
+    // first tools
+    var tools = $('.tools');
+    var toolsHeight = tools.outerHeight();
+    var toolsPadd = (windowHeight - toolsHeight) /2;
+    // tools also needs padding at side
+    var toolsWidth = tools.width();
+    // tools is inside right div so get width of this
+    var rightDivWidth = $('.right').width();
+    var rightDivPadd = (rightDivWidth - toolsWidth) / 2;
+
+    tools.css({'padding-top': toolsPadd, 'padding-left' : rightDivPadd, 'padding-right' : rightDivPadd});
+    // now chart 
+    var chart = $('.chart');
+    var chartHeight = chart.outerHeight();
+    var chartPadd = (windowHeight - chartHeight) /2;
+    chart.css('padding-top', chartPadd);
 }   
 /**
  * onload set dimensions
