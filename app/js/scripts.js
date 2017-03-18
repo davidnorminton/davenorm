@@ -14,9 +14,7 @@ function setDimensions() {
     // get window width
     var windowWidth = $(window).width();
     // make front page correct height to fit browser
-    frontpage.css('height', windowHeight);
-    // give projects 100% height of screen
-    $('#projects').css('height', windowHeight);  
+    frontpage.css('height', windowHeight); 
 
     $('.box-wrapper').each(function(){
         // add padding to about to center

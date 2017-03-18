@@ -79,7 +79,7 @@ gulp.task('clean:distro', function(){
 
 // sequence tasks
 gulp.task('build', function(callback){
-    runSequence('clean:distro', ['sass', 'useref', 'images'],
+    runSequence('clean:distro', ['sass', 'useref', 'images', 'fonts'],
     callback
     )
 });
@@ -89,4 +89,8 @@ gulp.task('default', function(callback){
     runSequence(['sass', ['browserSync', 'watch']],
     callback
     )
+});
+//copy fonts
+gulp.task('fonts', function(){
+    return gulp.src(['app/fonts/**/*']).pipe(gulp.dest('distro/fonts'));
 });
