@@ -102,7 +102,7 @@ $(document).ready(function(){
 /**
  * set links to low opacity to animate when side panel loaded
  */
-var links = ['about','project','process','blog','contact'];
+var links = ['about','project','opensource','blog','contact'];
 var i;
 var linksLen = links.length; 
 for (i=0; i<linksLen;i++) {
@@ -232,21 +232,21 @@ $(document).scroll(function(){
     if ( about.inRange() ) {
         $('.about-title').fadeIn(300);
     } else {
-        $('.about-title').css({'display':'none'});
+        $('.about-title').fadeOut('fast');
     }
     // skills section
     var skills = new waypoints('#skills',70);
     if ( skills.inRange() ) {
         $('.skills-title').fadeIn(300);
     } else {
-        $('.skills-title').css({'display':'none'});
+        $('.skills-title').fadeOut('fast');
     }
     // contact section
     var contact = new waypoints('#contact', 40);   
     if ( contact.inRange() ) {
         $('.contact-title').fadeIn(300);
     } else {
-        $('.contact-title').css({'display':'none'});
+        $('.contact-title').fadeOut('fast');
     }
     // projects section
     var projects = new waypoints('#projects', 40);
@@ -254,8 +254,8 @@ $(document).scroll(function(){
         $('.projects-title').fadeIn(300);
         $('.work-to-head').css('display' , 'inline-block');       
     } else {
-        $('.projects-title').css({'display':'none'});
-        $('.work-to-head').css('display' , 'none');
+        $('.projects-title').fadeOut('fast');
+        $('.work-to-head').fadeOut('fast');
     }
     // opensource section
     var opensource = new waypoints('#opensource', 40);
@@ -263,8 +263,8 @@ $(document).scroll(function(){
         $('.opensource-title').fadeIn(300);
         $('.work-to-head').css('display' , 'inline-block');       
     } else {
-        $('.opensource-title').css({'display':'none'});
-        $('.work-to-head').css('display' , 'none');
+        $('.opensource-title').fadeOut('fast');
+        $('.work-to-head').fadeOut('fast');
     }
 });
 /**

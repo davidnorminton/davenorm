@@ -427,8 +427,7 @@ textarea:focus, input:focus {
   padding: 18px 5px;
   font-size: 1.2em;
   color: #1b1a1a;
-  height: 29px;
-  opacity: 0; }
+  height: 29px; }
 
 #skills {
   position: relative;
