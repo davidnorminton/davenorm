@@ -85,7 +85,7 @@ textarea:focus, input:focus {
   clear: both;
   z-index: 12345; }
 
-.pane-image-back, .pane-project, .pane-about, .pane-skills, .pane-contact, .pane-opensource, .pane-blog {
+.pane-image-back {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -96,22 +96,70 @@ textarea:focus, input:focus {
   height: 100%; }
 
 .pane-project {
-  background: url("../images/work.jpg"); }
+  background: url("../images/work.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all linear 0.4s;
+  -moz-transition: all linear 0.4s;
+  -webkit-transition: all linear 0.4s;
+  width: 100%;
+  height: 100%; }
 
 .pane-about {
-  background: url("../images/leeds.jpg"); }
+  background: url("../images/leeds.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all linear 0.4s;
+  -moz-transition: all linear 0.4s;
+  -webkit-transition: all linear 0.4s;
+  width: 100%;
+  height: 100%; }
 
 .pane-skills {
-  background: url("../images/skills.jpg"); }
+  background: url("../images/skills.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all linear 0.4s;
+  -moz-transition: all linear 0.4s;
+  -webkit-transition: all linear 0.4s;
+  width: 100%;
+  height: 100%; }
 
 .pane-contact {
-  background: url("../images/contact.jpg"); }
+  background: url("../images/contact.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all linear 0.4s;
+  -moz-transition: all linear 0.4s;
+  -webkit-transition: all linear 0.4s;
+  width: 100%;
+  height: 100%; }
 
 .pane-opensource {
-  background: url("../images/process.jpg"); }
+  background: url("../images/process.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all linear 0.4s;
+  -moz-transition: all linear 0.4s;
+  -webkit-transition: all linear 0.4s;
+  width: 100%;
+  height: 100%; }
 
 .pane-blog {
-  background: url("../images/blog.jpg"); }
+  background: url("../images/blog.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all linear 0.4s;
+  -moz-transition: all linear 0.4s;
+  -webkit-transition: all linear 0.4s;
+  width: 100%;
+  height: 100%; }
 
 .main {
   width: 100%;
@@ -201,6 +249,13 @@ textarea:focus, input:focus {
   clear: both; }
 
 /** about section **/
+.about-me-back {
+  position: absolute;
+  font-size: 223px;
+  z-index: 0;
+  top: 0;
+  color: rgba(245, 245, 220, 0.28); }
+
 .pages {
   width: 65%;
   margin: auto; }
