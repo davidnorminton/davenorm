@@ -14,13 +14,33 @@ body{
     font-family: $main_font;
     color : #555555;
 }
+#social {
+    position : absolute;
+    right : 0;
+    top: calc(50% - 137px);
+}
+.social-icons {
+    color: #1f2548;
+    font-size: 22px;
+    display: block;
+    margin: 10px;
+    background: white;
+    border: 1px solid #1f2548;
+    border-radius: 50px;
+    padding: 5px;
+}
+.social-icons:hover {
+    color: white;
+    background: #1f2548;
+    transition : all ease .5s;
+}
 .left {
     float : left;
-    width : 50%;
+    width : 60%;
 }
 .right {
     float : right;
-    width : 50%;
+    width : 40%;
 }
 a {
     text-decoration: none;
@@ -31,6 +51,7 @@ a {
 textarea:focus, input:focus{
     outline: none;
 }
+
 #menu-pic{
     width : 65%;
     height : 100%;
@@ -253,6 +274,7 @@ textarea:focus, input:focus{
     z-index: 0;
     top: 0;
     color: rgba(245, 245, 220, 0.28);
+    transition : all ease 1.4s
 }
 .pages {
     width: 65%;
@@ -270,6 +292,8 @@ textarea:focus, input:focus{
     font-size: 35px;
     text-align: left;
     color : #fff;
+    transition : all ease 2.5s;
+    position : relative;
 }
 .page-index {
     list-style : none;

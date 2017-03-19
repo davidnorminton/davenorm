@@ -35,8 +35,13 @@ function setDimensions() {
     var rightDivPadd = (rightDivWidth - toolsWidth) / 2;
 
     tools.css({'padding-top': toolsPadd, 'padding-left' : rightDivPadd, 'padding-right' : rightDivPadd});
+    
     // now chart 
+    var leftDivWidth = $('.left').width();
     var chart = $('.chart');
+    var chartWidth = chart.width();
+    var leftDivPadd = ( leftDivWidth - chartWidth ) / 2;
+    chart.css('margin-left', leftDivPadd);
     var chartHeight = chart.outerHeight();
     var chartPadd = (windowHeight - chartHeight) /2;
     chart.css('padding-top', chartPadd);
@@ -286,19 +291,20 @@ $(document).scroll(function(){
      * @ return boolean if point reached
      */
     function aboutPos( multiplier ) { 
-        multiplier = multiplier;
+        var multiplier = multiplier;
         // div height of #about-me 
-        height_of_about = $('#about-me').outerHeight();
+        var height_of_about = $('#about-me').outerHeight();
         // offset + height  
-        top_of_about = $('#about-me').offset().top + height_of_about;
+        var top_of_about = $('#about-me').offset().top + height_of_about;
         // window scroll position
-        win_scroll = $(window).height() + $(window).scrollTop();
+        var win_scroll = $(window).height() + $(window).scrollTop();
         // calculate position
         if ( multiplier === 0 ) {
              return win_scroll < top_of_about + (height_of_about / 10 );
         } else {
              return win_scroll > top_of_about + (height_of_about / 10) * multiplier;
         }
+       
     }
     // function set css style background-color with correct color
     function setBackground( pos ) {
@@ -347,6 +353,23 @@ $(document).scroll(function(){
     if( aboutPos(10) ) {
         setBackground(10); 
     }
+    /**
+     * Animate about section text
+     */
+    // first set elements
+    var p = $('.pages-p'),
+        about_back = $('.about-me-back');
+    
+    p.css({'top' : '200px', 'opacity' : '0'});
+    about_back.css({'bottom' : '200px', 'opacity' : '0'});
+
+    var about = new waypoints('.pages-p', 200);
+    
+    if ( about.win_bottom > about.totalOffset ) {
+        p.css({'opacity' : '1', 'top' : '0'});
+        about_back.css({ 'bottom' : '0', 'opacity' : '1'});  
+    }
+
 });
 
 /**
