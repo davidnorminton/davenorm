@@ -203,12 +203,22 @@ function waypoints(element, precision) {
     // add precision to position
     this.precision = precision;
     // element offset position
-    this.eleOffset =  $(this.element).offset().top + $(this.element).outerHeight()-this.precision;
+    this.eleOffset =  $(this.element).offset().top;
+    // element height
+    this.eleHeight = $(this.element).outerHeight();
+    // total offset
+    this.totalOffset = $(this.element).offset().top + $(this.element).outerHeight() - this.precision;
     // range element is in viewport
-    this.range =  this.eleOffset + this.win_height;
+    this.range =  this.eleOffset + this.eleHeight + this.win_height;
+    //projects offset
+    this.projectsOffset = this.eleOffset + 660;
+    // projects range
+    this.projectsRange = function(){
+        return this.win_bottom > this.projectsOffset && this.win_bottom < this.range;
+    }
     // checck if element in range
     this.inRange = function() {
-        return this.win_bottom > this.eleOffset && this.win_bottom < this.range
+        return this.win_bottom > this.totalOffset && this.win_bottom < this.range;
     }
     
 }
@@ -222,7 +232,7 @@ $(document).scroll(function(){
     }
     // about section
     var about = new waypoints('#about-me', 10);
-    if ( about.win_bottom > about.eleOffset  ) {
+    if ( about.win_bottom > about.totalOffset  ) {
         $('#about-head').fadeIn(300);
     } else {
         $('#about-head').fadeOut(300);
@@ -248,7 +258,7 @@ $(document).scroll(function(){
     }
     // projects section
     var projects = new waypoints('#projects', 40);
-    if ( projects.inRange() ) {
+    if ( projects.projectsRange() ) {
         $('.projects-title').fadeIn(300);
         $('.work-to-head').css('display' , 'inline-block');       
     } else {
@@ -471,6 +481,40 @@ $('#next-project').click(function(){
     // set changes in the DOM  
     proData.changeDOM(item_data);
 });
+
+$('.project-img').hover(function(){
+
+       var cover = $(this).children('.project-cover');
+       var p = $(this).find('p');
+       var h3 = $(this).find('h3');
+       var butt = $(this).find('.view-case');
+       
+       cover.css({'right':'0','opacity':'0.8'});
+       p.css({'transform':'scale(1.2)'});
+       h3.css({'transform':'scale(1.2)'});
+       butt.css({'transform':'scale(1.2)'});
+   },
+   function(){
+
+       var cover = $(this).children('.project-cover');
+       var p = $(this).find('p');
+       var h3 = $(this).find('h3');
+       var butt = $(this).find('.view-case');       
+       
+       cover.css({'right':'100%','opacity':'0'});
+       p.css({'transform':'scale(1)'});
+       h3.css({'transform':'scale(1)'});  
+       butt.css({'transform':'scale(1)'});       
+   });
+$('.view-case').hover(function(){
+           var cover = $(this).children('.button-overlay');
+           cover.animate({'opacity':'1','width':'100%'},1000);
+       },
+        function(){
+           var cover = $(this).children('.button-overlay');
+           cover.animate({'opacity':'0','width':'0'},400);       
+        }
+    );   
 /** end projects navigation **/
 
 /**

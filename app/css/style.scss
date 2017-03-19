@@ -479,6 +479,16 @@ textarea:focus, input:focus{
     background : black;
     opacity : 0.5;
 }
+.project-cover {
+    position : absolute;
+    top : 0;
+    height : 100%;
+    width : 100%;
+    background: linear-gradient(rgb(245, 15, 163),rgba(82, 18, 59, 0.9));
+    opacity: 0;
+    right: 100%;
+    transition : all linear .3s
+}
 .project-img {
     position:relative;
     margin : auto;
@@ -486,6 +496,7 @@ textarea:focus, input:focus{
     box-shadow: 0 20px 80px 0 rgba(0,0,0,.45);
     height : 480px;
     width : 60%;
+    overflow : hidden;
 }
 .intro-box {
     position : absolute;
@@ -503,6 +514,7 @@ textarea:focus, input:focus{
     text-align : left;
     font-size : 40px;
     margin : 10px 0;
+    transition : all ease .4s;
     
 }
 .k-eng-img {
@@ -523,17 +535,30 @@ textarea:focus, input:focus{
     font-size: 21px;
     padding: 0;
     margin: 10px 0 18px 0;
+    transition : all ease .4s;
 }
 .view-case {
     border: 0;
     padding: 15px 54px;
-    background: rgb(241, 72, 39);
+    background: #3F51B5;
     font-family: spartan;
     font-weight: 100;
     color: white;
     letter-spacing: 6px;
+    transition : all ease .4s;    
+    cursor :pointer;
+    position : relative;
+    overflow : hidden;
 }
-
+.button-overlay {
+    position : absolute;
+    top : 0;
+    left : 0;
+    background : rgba(20, 28, 78, 0.65);;
+    height : 100%;
+    width : 0;
+    opacity : 0;
+}
 .highlight {
     padding: 1px 11px;
     float: left;
