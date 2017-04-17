@@ -270,15 +270,7 @@ $(document).scroll(function(){
         $('.projects-title').fadeOut('fast');
         $('.work-to-head').fadeOut('fast');
     }
-    // opensource section
-    var opensource = new waypoints('#opensource', 40);
-    if ( opensource.inRange() ) {
-        $('.opensource-title').fadeIn(300);
-        $('.work-to-head').css('display' , 'inline-block');       
-    } else {
-        $('.opensource-title').fadeOut('fast');
-        $('.work-to-head').fadeOut('fast');
-    }
+
 });
 /**
  * Fade the about-me section background to white on scroll
