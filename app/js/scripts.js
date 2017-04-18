@@ -393,109 +393,7 @@ $(window).scroll(function(){
  * PROJECTS SECTION :
  * 
  */
-// object to store project navigation data and calculate correct
-// links to go into next, prev, and title box's
-var proData = {
-    // array of project titles
-    projects : ['k-eng', 'beesafe', 'fitscreen', 'bonneela', 'allheavymetal'],
-    // method to return length of projects array
-    projectsLen : function(){
-        return this.projects.length
-    },
-    // store values for nav buttons - these keys correspond to projects array values
-    prev : 1, next : 1,current : 1,            
-    // get value from array - pos is equal to key
-    getValue : function(pos) {
-        return this.projects[pos];     
-    },
-    // clear the screen on any projects present
-    clear : function(){
-        for ( var i=0; i < this.projectsLen(); i++ ) {
-            $('#'+ this.projects[i]).css('display','none');
-        }           
-    }, 
-    // method to return indexOf link attr in array
-    projectIndex : function(project) {
-        return this.projects.indexOf(project);
-    },
-    // change prev property from knowing the current prev position
-    chgallFromPrev : function(pos) {
-                if ( pos == 0 ) {
-                    this.prev = (this.projectsLen()-1);
-                    this.current = 0;
-                    this.next = 1;
-                }
-                else if ( pos == ( this.projectsLen() -1 ) ) {
-                    this.prev = this.projectsLen() -2;
-                    this.current = pos;
-                    this.next = 0; 
-                } 
-                else {
-                    this.prev = pos -1;
-                    this.current = pos;
-                    if ( pos > this.projectsLen() -1 ) {
-                        this.next = 0;
-                    } else {
-                        this.next = pos + 1
-                    }
-                }
-             
-            },
-    // change current, next and prev values given the array key
-    chgallFromNext : function(pos) {
-        if ( pos == this.projectsLen()-1 ) {
-            this.next = 0;
-            this.current = pos;
-            this.prev = this.projectsLen()-2
-        }   
-        else if ( pos == 0 ) {
-            this.next = 1;
-            this.current = pos;
-            this.prev = this.projectsLen()-1    
-        } 
-         else {
-            this.next = pos + 1;
-            this.current = pos;
-            this.prev = pos -1;
-        }
-    },
-    // if known prev project set current and next from this
-    changeFromknownPrev : function(prev) {
-        posKnownPrev = this.projectIndex(prev);
-        this.chgallFromPrev(posKnownPrev);                     
-    },
-    // if known next project set current and prev from this
-    changeFromknownNext : function(next) {
-        posKnownNext = this.projectIndex(next);
-        this.chgallFromNext(posKnownNext);
-    },
-    // changeDOM
-    changeDOM : function( title ) {
-        this.clear();
-        $('#'+title).css('display','block');
-        $('#prev-project').attr('data-prev', this.getValue(this.prev));
-        $('#next-project').attr('data-next', this.getValue(this.next));
-        $('.work-list').children('.list-item').html(title);
-    }
-}
-// prev button click action
-$('#prev-project').click(function(){
-    // data-prev attr stores prev project
-    var item_data = $(this).attr('data-prev');
-    // set proData object properties based on data-prev value  
-    proData.changeFromknownPrev(item_data);
-    // set changes in the DOM  
-    proData.changeDOM(item_data);
-});
-// next button click action
-$('#next-project').click(function(){
-    // data-prev attr stores prev project
-    var item_data = $(this).attr('data-next');
-    // set proData object properties based on data-prev value  
-    proData.changeFromknownPrev(item_data);
-    // set changes in the DOM  
-    proData.changeDOM(item_data);
-});
+
 
 $('.project-img').hover(function(){
 
@@ -549,6 +447,19 @@ $(function() {
     }
   });
 });
+/**
+ * contact form
+ * submit button
+ */
+$('#submitButt').hover(function(){
+           var cover = $(this).children('.submit-overlay');
+           cover.animate({'opacity':'1','width':'100%'},1000);
+       },
+        function(){
+           var cover = $(this).children('.submit-overlay');
+           cover.animate({'opacity':'0','width':'0'},400);       
+        }
+    );    
 /**
  * lazy load images
  */

@@ -307,6 +307,23 @@ textarea:focus, input:focus{
     transition : all ease 2.5s;
     position : relative;
 }
+@media only screen and ( max-width : 950px) {
+    .about-me-back {
+        font-size : 123px;
+    }
+    .pages {
+        width :90%;
+    }
+}
+@media only screen and ( max-width : 500px) {
+    .about-me-back {
+        font-size : 83px;
+    }
+    .pages {
+        width :95%;
+        font-size:30px;
+    }
+}
 .page-index {
     list-style : none;
     display : inline-block;
@@ -344,7 +361,7 @@ textarea:focus, input:focus{
     height : 100px;
     display: block;
     text-align: right;
-    width: 125px;
+    width: 50px;
     padding-right: 17px;
     border-right: 1px solid #333;
 }
@@ -386,8 +403,8 @@ textarea:focus, input:focus{
 .tool {
     min-width: 235px;
     display: inline-block;
-    text-align: right;
-    margin-right: 10px;
+    text-align: left;
+    margin-left: 10px;
     font-size: 20px;
 }
 .yellow {
@@ -398,7 +415,7 @@ textarea:focus, input:focus{
 }
 .css {
   background-image: linear-gradient(#a71919, #f30909);
-  left: 157px;
+  left: 82px;
   position: absolute;
   bottom: -16px; }
 
@@ -408,7 +425,7 @@ textarea:focus, input:focus{
 
 .html {
   background-image: linear-gradient(#cc8a12, #fdea0a);
-  left: 259px;
+  left: 184px;
   position: absolute;
   bottom: -16px; }
 
@@ -418,7 +435,7 @@ textarea:focus, input:focus{
 
 .javascript {
   background-image: linear-gradient(#118a2b, #13c729);
-  left: 361px;
+  left: 286px;
   position: absolute;
   bottom: -16px; }
 
@@ -428,7 +445,7 @@ textarea:focus, input:focus{
 
 .php {
   background-image: linear-gradient(#126e8a, #0fa3d8);
-  left: 463px;
+  left: 388px;
   position: absolute;
   bottom: -16px; }
 
@@ -438,7 +455,7 @@ textarea:focus, input:focus{
 
 .linux {
   background-image: linear-gradient(#821079, #ec13bf);
-  left: 565px;
+  left: 490px;
   position: absolute;
   bottom: -16px; }
 
@@ -582,6 +599,10 @@ textarea:focus, input:focus{
     transition : all ease .4s;
     
 }
+.blog-img {
+    background : url('../images/blog.png') no-repeat center center;
+    background-size : cover;
+}
 .k-eng-img {
     background : url('../images/k-eng.png') no-repeat center center;
     background-size : cover;
@@ -686,10 +707,12 @@ textarea.contact-input {
     color: #555555;
 }
 .submit {
+    position : relative;
     background: white;
     border: 2px solid #333;
     padding: 7px 12px;
     font-size: 25px;
+    cursor : pointer;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: pink;
@@ -706,5 +729,28 @@ textarea.contact-input {
 :-moz-placeholder { /* Firefox 18- */
     color: pink;
     font-size : 30px;
+}
+#field1, #field2, #field3 {
+    position : relative;
+}
+.message {
+    position : absolute;
+    right: 0;
+    top : 50px;
+}
+.success {
+    color : green;
+}
+.error {
+    color : red;
+}
+.submit-overlay {
+    position : absolute;
+    top : 0;
+    left : 0;
+    background: rgba(255, 192, 203, 0.64);
+    height : 100%;
+    width : 0;
+    opacity : 0;
 }
 /** end contact area **/
