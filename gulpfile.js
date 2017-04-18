@@ -55,9 +55,9 @@ gulp.task('useref', function(){
     return gulp.src('app/*.html')
     .pipe(useref())
     // minify if js file
-    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('app/*.js', uglify()))
     // minify if css
-    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulpIf('app/*.css', cssnano()))
     .pipe(gulp.dest('distro'))
 });
 
