@@ -1,5 +1,5 @@
 {
-  "files": ["src/skills.ts", "src/git.ts", "src/contact.ts"],
+  "files": ["src/ts/skills.ts", "src/ts/contact.ts"],
   "compilerOptions": {
     "noImplicitAny": true,
     "target": "es5",
